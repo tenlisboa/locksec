@@ -26,22 +26,22 @@ func TestExtractLine(t *testing.T) {
 		{
 			input:  `"pend": {`,
 			ftype:  Json,
-			output: &out{key: "", value: nil, err: errMatch},
+			output: &out{key: "", value: "", err: errMatch},
 		},
 		{
 			input:  `},`,
 			ftype:  Json,
-			output: &out{key: "", value: nil, err: errMatch},
+			output: &out{key: "", value: "", err: errMatch},
 		},
 		{
 			input:  "",
 			ftype:  Json,
-			output: &out{key: "", value: nil, err: errMatch},
+			output: &out{key: "", value: "", err: errMatch},
 		},
 		{
 			input:  "zod@^3.21.4:",
 			ftype:  Json,
-			output: &out{key: "", value: nil, err: errMatch},
+			output: &out{key: "", value: "", err: errMatch},
 		},
 		{
 			input:  `resolved "https://registry.yarnpkg.com/zod/-/zod-3.21.4.tgz#10882231d992519f0a10b5dd58a38c9dabbb64db"`,

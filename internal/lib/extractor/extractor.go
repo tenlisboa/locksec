@@ -27,13 +27,13 @@ func New(ftype fileType) *extractor {
 	}
 }
 
-func (e *extractor) ExtractLine(line string) (string, any, error) {
+func (e *extractor) ExtractLine(line string) (string, string, error) {
 	re := regexp.MustCompile(e.getRex())
 
 	match := re.FindStringSubmatch(line)
 
 	if len(match) < 3 {
-		return "", nil, errMatch
+		return "", "", errMatch
 	}
 
 	key, value := match[1], match[2]
